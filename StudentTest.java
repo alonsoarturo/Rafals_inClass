@@ -54,11 +54,32 @@ public class StudentTest {
 		int expected = 0;
 		assertEquals(expected, actual);
 
+	}
+	
+	@Test
+	public void testCompare() throws NameException {
+		Student firstStudent = new Student("x", "Y", 2);
+		Student secondStudent = new Student("x", "Y", 3);
+		Student student = new Student("A", "B", 5);
 		
+		CompareLastFirstName clfn = new CompareLastFirstName();
 		
+		clfn.compa
 		
-
-
+		result = false;
+		
+		actual = secondStudent.compareTo(student);
+		if (actual < 0)
+			result = true;
+		assertTrue(result);
+		
+		result = false;
+		
+		Student StudentSame = new Student("x", "Y", 3);
+		actual = secondStudent.compareTo(StudentSame);
+		int expected = 0;
+		assertEquals(expected, actual);
+		
 	}
 	
 	@Test
